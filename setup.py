@@ -8,14 +8,13 @@ def main():
 
     setuptools.setup(
         name                 = "junkmodule",
-        version              = "2017.01.13.1700",
+        version              = "2017.01.13.1708",
         description          = "junk testing module",
         long_description     = long_description(),
         url                  = "https://github.com/wdbm/junkmodule",
         author               = "Will Breaden Madden",
         author_email         = "wbm@protonmail.ch",
         license              = "GPLv3",
-        include_package_data = True,
         py_modules           = [
                                "junkmodule"
                                ],
