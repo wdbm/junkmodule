@@ -8,7 +8,7 @@ def main():
 
     setuptools.setup(
         name                 = "junkmodule",
-        version              = "2017.01.13.1708",
+        version              = "2017.01.13.1720",
         description          = "junk testing module",
         long_description     = long_description(),
         url                  = "https://github.com/wdbm/junkmodule",
