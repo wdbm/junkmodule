@@ -2,16 +2,15 @@
 # -*- coding: utf-8 -*-
 
 import os
-import pypandoc
 import setuptools
 
 def main():
 
     setuptools.setup(
         name                 = "junkmodule",
-        version              = "2017.01.13.1416",
+        version              = "2017.01.13.1504",
         description          = "junk testing module",
-        long_description     = pypandoc.convert("README.md", "rst"),
+        long_description     = long_description(),
         url                  = "https://github.com/wdbm/junkmodule",
         author               = "Will Breaden Madden",
         author_email         = "wbm@protonmail.ch",
@@ -31,6 +30,18 @@ def main():
             junkmodule = junkmodule:junkmodule
         """
     )
+
+def long_description():
+
+    try:
+        try:
+            import pypandoc
+            long_description = pypandoc.convert("README.md", "rst")
+        except ImportError:
+            long_description = open("README.md").read()
+    except Exception:
+        long_description = ""
+    return long_description
 
 if __name__ == "__main__":
     main()
