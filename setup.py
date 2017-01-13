@@ -8,7 +8,7 @@ def main():
 
     setuptools.setup(
         name                 = "junkmodule",
-        version              = "2017.01.13.1720",
+        version              = "2017.01.13.1724",
         description          = "junk testing module",
         long_description     = long_description(),
         url                  = "https://github.com/wdbm/junkmodule",
@@ -30,14 +30,16 @@ def main():
         """
     )
 
-def long_description():
+def long_description(
+    filename = "README.md"
+    ):
 
     try:
         try:
             import pypandoc
-            long_description = pypandoc.convert("README.md", "rst")
+            long_description = pypandoc.convert(filename, "rst")
         except ImportError:
-            long_description = open("README.md").read()
+            long_description = open(filename).read()
     except Exception:
         long_description = ""
     return long_description
