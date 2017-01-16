@@ -9,7 +9,7 @@ def main():
 
     setuptools.setup(
         name                 = "junkmodule",
-        version              = "2017.01.16.1507",
+        version              = "2017.01.16.1511",
         description          = "junk testing module",
         long_description     = long_description(),
         url                  = "https://github.com/wdbm/junkmodule",
@@ -36,13 +36,13 @@ def long_description(
     filename = "README.md"
     ):
 
-    try:
+    if os.path.isfile(os.path.expandvars(filename)):
         try:
             import pypandoc
             long_description = pypandoc.convert_file(filename, "rst")
         except ImportError:
             long_description = open(filename).read()
-    except IOError:
+    else:
         long_description = ""
     return long_description
 
