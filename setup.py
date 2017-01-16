@@ -8,7 +8,7 @@ def main():
 
     setuptools.setup(
         name                 = "junkmodule",
-        version              = "2017.01.13.1724",
+        version              = "2017.01.16.1427",
         description          = "junk testing module",
         long_description     = long_description(),
         url                  = "https://github.com/wdbm/junkmodule",
@@ -19,7 +19,8 @@ def main():
                                "junkmodule"
                                ],
         install_requires     = [
-                               "numpy"
+                               "numpy",
+                               "tonescale"
                                ],
         scripts              = [
                                "junkmodule_script.py"
@@ -37,10 +38,10 @@ def long_description(
     try:
         try:
             import pypandoc
-            long_description = pypandoc.convert(filename, "rst")
+            long_description = pypandoc.convert_file(filename, "rst")
         except ImportError:
             long_description = open(filename).read()
-    except Exception:
+    except IOError:
         long_description = ""
     return long_description
 
