@@ -2,13 +2,14 @@
 # -*- coding: utf-8 -*-
 
 import os
+
 import setuptools
 
 def main():
 
     setuptools.setup(
         name                 = "junkmodule",
-        version              = "2017.01.16.1427",
+        version              = "2017.01.16.1507",
         description          = "junk testing module",
         long_description     = long_description(),
         url                  = "https://github.com/wdbm/junkmodule",

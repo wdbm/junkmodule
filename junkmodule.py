@@ -31,11 +31,11 @@
 from __future__ import division
 
 name    = "junkmodule"
-version = "2017-01-13T1700Z"
+version = "2017-01-16T1507Z"
 
 import os
 
 import numpy
 
-def hello_world()
+def hello_world():
     print("hello world")
