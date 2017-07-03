@@ -9,7 +9,7 @@ def main():
 
     setuptools.setup(
         name                 = "junkmodule",
-        version              = "2017.01.16.1511",
+        version              = "2017.07.03.1309",
         description          = "junk testing module",
         long_description     = long_description(),
         url                  = "https://github.com/wdbm/junkmodule",
@@ -27,9 +27,9 @@ def main():
                                "junkmodule_script.py"
                                ],
         entry_points         = """
-            [console_scripts]
-            junkmodule = junkmodule:junkmodule
-        """
+                               [console_scripts]
+                               junkmodule = junkmodule:junkmodule
+                               """
     )
 
 def long_description(

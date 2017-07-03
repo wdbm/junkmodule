@@ -28,14 +28,14 @@
 # <http://www.gnu.org/licenses/>.                                              #
 #                                                                              #
 ################################################################################
+
 from __future__ import division
-
-name    = "junkmodule"
-version = "2017-01-16T1507Z"
-
 import os
 
 import numpy
+
+name    = "junkmodule"
+version = "2017-07-03T1309Z"
 
 def hello_world():
     print("hello world")
